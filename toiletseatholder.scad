@@ -4,22 +4,19 @@ $fn=50;
 cylinder(r=25/2, h= 3.5);
 
 // Inserted part
-translate([0,0,-50])
+translate([0,0,-30])
 union() {
     difference() {
-        cylinder(r1=11,r2=10, h=50);
+        cylinder(r2=10.2, r1=10, h=30);
         
-        cylinder(r=20/2-2,h=50);
+        cylinder(r=7.5,h=50);
         
-        translate([-2,-50,0])
-        cube([4,100,50]);
-
-        translate([-50,-2,0])
-        cube([100,4,50]);
+        translate([-2,-50,-6])
+        cube([4,100,30]);
     }
 }
 
-//extruding part
+// Top part
 translate([0,0,3.5])
 union() {
     translate([-4,0,12.5])
